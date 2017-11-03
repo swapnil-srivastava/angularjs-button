@@ -1,0 +1,74 @@
+<pxbutton text="vm.button1Properties.text" type="vm.button1Properties.type" on-click="vm.button1Properties.onClick()"></pxbutton>
+
+<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+    <md-button>Normal Button</md-button>
+    <md-button md-no-ink class="md-primary">Primary (md-noink)</md-button>
+    <md-button ng-disabled="true" class="md-primary">Disabled</md-button>
+    <md-button class="md-warn">Warning</md-button>
+  </section>
+  
+      <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+        <md-button class="md-raised">Button</md-button>
+        <md-button class="md-raised md-primary">Primary</md-button>
+        <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
+        <md-button class="md-raised md-warn">Warn</md-button>
+        <div class="label">Raised</div>
+      </section>
+  
+      <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      <md-button class="md-fab" aria-label="Eat cake">
+          <md-icon><i class="material-icons">account_balance</i></md-icon>
+      </md-button>
+  
+      <md-button class="md-fab md-primary" aria-label="Use Android">
+        <md-icon md-font-icon="icon-home">
+         <i class="material-icons">account_balance_wallet</i>
+        </md-icon>
+      </md-button>
+  
+      <md-button class="md-fab" ng-disabled="true" aria-label="Comment">     
+          <md-icon> face </md-icon>
+      </md-button>
+  
+      <md-button class="md-fab md-primary md-hue-2" aria-label="Profile">
+          <md-icon icon="material-icons">account_balance_wallet</md-icon>
+      </md-button>
+  
+      <md-button class="md-fab md-mini" aria-label="Eat cake">
+          <md-icon class="material-icons"> theaters </md-icon>
+      </md-button>
+  
+      <md-button class="md-fab md-mini md-primary" aria-label="Use Android">
+        <md-icon style="color: greenyellow;"> track_changes </md-icon>
+      </md-button>
+    <div class="label">FAB</div>
+  </section>
+  
+  <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      <md-button ng-href="{{googleUrl}}" target="_blank">Default Link</md-button>
+      <md-button class="md-primary" ng-href="{{googleUrl}}" target="_blank">Primary Link</md-button>
+  
+      <md-button>Default Button</md-button>
+    <div class="label">Link vs. Button</div>
+  </section>
+  
+  <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+    <md-button class="md-icon-button md-primary" aria-label="Settings">
+      <md-icon> alarm_on</md-icon>
+    </md-button>
+    <md-button class="md-icon-button md-accent" aria-label="Favorite">
+      <md-icon>backup</md-icon>
+    </md-button>
+    <md-button class="md-icon-button" aria-label="More">
+      <md-icon>card_travel</md-icon>
+    </md-button>
+    <md-button href="http://google.com"
+               title="Launch Google.com in new window"
+               target="_blank"
+               ng-disabled="false"
+               aria-label="Google.com"
+               class="md-icon-button launch" >
+      <md-icon>launch</md-icon>
+    </md-button>
+    <div class="label">Icon Button</div>
+  </section>
