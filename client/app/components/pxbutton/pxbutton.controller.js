@@ -1,18 +1,29 @@
 class pxbuttonController {
     constructor() {
-      this.name = 'pxbutton';
     }
-
-    getClass(type) { // eslint-disable-line class-methods-use-this
+    
+    getClass(type) {
       switch (type) {
         case 'primary':
-          return ['md-primary', 'plain'];
-        case 'secondary':
-          return ['md-secondary', 'secondary'];
-        case 'important':
-          return ['md-primary', 'action'];
+          return `md-primary`;
+        case 'raised':
+          return `md-raised`;
+        case 'primaryRaised':
+          return `md-primary md-raised`;
+        case 'warn':
+          return 'md-warn';
+        case 'warnRaised':
+          return `md-warn md-raised`;
+        case 'fab':
+          return `md-fab`;
+        case 'fabRaised':
+          return `md-fab md-raised`;
+        case 'fabMini':
+          return `md-fab md-mini`;
+        case 'iconButton':
+          return `md-icon-button md-primary`;
         default:
-          return ['md-primary', 'plain'];
+          return `md-primary`;
       }
     }
   }

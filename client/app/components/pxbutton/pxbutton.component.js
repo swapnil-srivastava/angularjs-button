@@ -5,10 +5,10 @@ import './pxbutton.component.scss';
 let pxbuttonComponent = {
   restrict: 'E',
   bindings: {
-    disabled: '<',
     text: '<',
     type: '<',
-    logo: '<',
+    icon: '<',
+    onDisabled: '<',
     onClick: '&',
   },
   template,

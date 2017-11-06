@@ -1,74 +1,109 @@
-<pxbutton text="vm.button1Properties.text" type="vm.button1Properties.type" on-click="vm.button1Properties.onClick()"></pxbutton>
+    <div layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+        <h4>Normal Buttons</h4>  
+    </div>
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+        <pxbutton 
+        text="vm.btn1.text" 
+        icon="vm.btn1.icon"
+        type="vm.btn1.type" 
+        on-click="vm.btn1.onClick()">
+        </pxbutton>   
 
-<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-    <md-button>Normal Button</md-button>
-    <md-button md-no-ink class="md-primary">Primary (md-noink)</md-button>
-    <md-button ng-disabled="true" class="md-primary">Disabled</md-button>
-    <md-button class="md-warn">Warning</md-button>
-  </section>
-  
+        <pxbutton 
+        md-no-ink
+        text="vm.text = 'Primary (NO - INK)'" 
+        type="vm.btn1.type" 
+        on-click="vm.btn1.onClick()">
+        </pxbutton>   
+        
+        
+        <pxbutton 
+        text="vm.text = 'Can\'t check console'" 
+        icon="vm.btn1.icon"
+        type="vm.btn1.type" 
+        on-disabled="vm.btn1.onDisabled"
+        on-click="vm.btn1.onClick()">
+        </pxbutton>  
+
+ 
+        <pxbutton text="vm.btn4.text" type="vm.btn4.type"
+        on-click="vm.btn4.onClick()"> </pxbutton>  
+      </section>
+      
+      <div layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+          <h4>Raised Buttons</h4>  
+      </div>
       <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-        <md-button class="md-raised">Button</md-button>
-        <md-button class="md-raised md-primary">Primary</md-button>
-        <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
-        <md-button class="md-raised md-warn">Warn</md-button>
-        <div class="label">Raised</div>
+        <pxbutton text="vm.text = 'Raised'" type="vm.btn2.type" on-click="vm.btn2.onClick()"> </pxbutton>   
+        <pxbutton text="vm.btn3.text" type="vm.btn3.type" 
+        on-click="vm.btn3.onClick()"> </pxbutton>   
+
+        <pxbutton text="vm.btn2.text" type="vm.btn2.type" on-disabled="vm.btn2.disabled" 
+        on-click="vm.btn2.onClick()"> </pxbutton>
+
+        <pxbutton text="vm.btn5.text" type="vm.btn5.type" on-disabled="vm.btn5.onDisabled"
+        on-click="vm.btn5.onClick()">
+        </pxbutton> 
+ 
       </section>
   
+      <div layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+          <h4>Fab and Fab Mini Buttons</h4>  
+      </div>
       <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-      <md-button class="md-fab" aria-label="Eat cake">
-          <md-icon><i class="material-icons">account_balance</i></md-icon>
-      </md-button>
+          <pxbutton 
+          icon="vm.btn6.icon"
+          type="vm.btn6.type" 
+          on-click="vm.btn6.onClick()">
+          </pxbutton> 
+
+          <pxbutton 
+          text="vm.btn6.text" 
+          type="vm.btn6.type" 
+          on-click="vm.btn6.onClick()">
+          </pxbutton> 
   
-      <md-button class="md-fab md-primary" aria-label="Use Android">
-        <md-icon md-font-icon="icon-home">
-         <i class="material-icons">account_balance_wallet</i>
-        </md-icon>
-      </md-button>
+          <pxbutton 
+          icon="vm.btn1.icon"
+          type="vm.btn6.type" 
+          on-disabled="true"
+          on-click="vm.btn6.onClick()">
+          </pxbutton> 
   
-      <md-button class="md-fab" ng-disabled="true" aria-label="Comment">     
-          <md-icon> face </md-icon>
-      </md-button>
+          <pxbutton 
+            icon="vm.btn7.icon"
+            type="vm.btn7.type" 
+            on-click="vm.btn7.onClick()">
+          </pxbutton> 
+
+          <pxbutton 
+          icon="vm.icon = 'track_changes'"
+          type="vm.type = 'fabRaised'" 
+          aria-label="Use Android"
+          on-click="vm.btn7.onClick()">
+        </pxbutton> 
   
-      <md-button class="md-fab md-primary md-hue-2" aria-label="Profile">
-          <md-icon icon="material-icons">account_balance_wallet</md-icon>
-      </md-button>
+      </section>
   
-      <md-button class="md-fab md-mini" aria-label="Eat cake">
-          <md-icon class="material-icons"> theaters </md-icon>
-      </md-button>
-  
-      <md-button class="md-fab md-mini md-primary" aria-label="Use Android">
-        <md-icon style="color: greenyellow;"> track_changes </md-icon>
-      </md-button>
-    <div class="label">FAB</div>
-  </section>
-  
-  <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-      <md-button ng-href="{{googleUrl}}" target="_blank">Default Link</md-button>
-      <md-button class="md-primary" ng-href="{{googleUrl}}" target="_blank">Primary Link</md-button>
-  
-      <md-button>Default Button</md-button>
-    <div class="label">Link vs. Button</div>
-  </section>
-  
-  <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-    <md-button class="md-icon-button md-primary" aria-label="Settings">
-      <md-icon> alarm_on</md-icon>
-    </md-button>
-    <md-button class="md-icon-button md-accent" aria-label="Favorite">
-      <md-icon>backup</md-icon>
-    </md-button>
-    <md-button class="md-icon-button" aria-label="More">
-      <md-icon>card_travel</md-icon>
-    </md-button>
-    <md-button href="http://google.com"
-               title="Launch Google.com in new window"
-               target="_blank"
-               ng-disabled="false"
-               aria-label="Google.com"
-               class="md-icon-button launch" >
-      <md-icon>launch</md-icon>
-    </md-button>
-    <div class="label">Icon Button</div>
-  </section>
+
+      <div layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+          <h4>Icon Buttons</h4>  
+      </div>
+      <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+          <pxbutton 
+          icon="vm.btn8.icon"
+          type="vm.btn8.type" 
+          on-click="vm.btn8.onClick()">
+        </pxbutton> 
+          <pxbutton 
+          icon="vm.icon = 'backup'"
+          type="vm.btn7.type" 
+          on-click="vm.btn8.onClick()">
+        </pxbutton>
+        <pxbutton 
+        icon="vm.icon = 'card_travel'"
+        type="vm.btn8.type" 
+        on-disabled="true"
+        on-click="vm.btn8.onClick()">
+      </pxbutton>  
+      </section>
